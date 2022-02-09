@@ -41,13 +41,14 @@
         android:layout_toEndOf="@+id/button4"
         android:ems="10"
         android:fontFamily="sans-serif"
-        android:hint="Type Search terms"
+        android:hint="@string/type_search_terms"
         android:imeOptions="actionSearch"
         android:inputType="text"
         android:selectAllOnFocus="true"
         android:singleLine="true"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:autofillHints="" />
 
     <Button
         android:id="@+id/button3"
@@ -91,39 +92,30 @@
         android:layout_marginStart="0dp"
         android:layout_marginTop="3dp"
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"/>
+        android:layout_marginBottom="0dp">
 
-    <Button
-        android:id="@+id/button5"
-        android:layout_width="77dp"
-        android:layout_height="29dp"
-        android:layout_below="@+id/button7"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="3dp"
-        android:background="@android:color/holo_green_light"
-        android:text="Rate us"
-        android:visibility="invisible" />
+    </WebView>
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/fwd"
+    <View
+        android:id="@+id/MenuView"
+        android:layout_width="155dp"
+        android:layout_height="99dp"
+        android:layout_below="@id/progressBar1"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="5dp"
-        android:layout_marginEnd="2dp"
-        android:background="@drawable/dlx"
+        android:layout_marginEnd="5dp"
+        android:background="#FFFFFF"
         android:visibility="invisible" />
+
 
     <Button
         android:id="@+id/back"
         android:layout_width="29dp"
         android:layout_height="32dp"
-        android:layout_below="@+id/button3"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="13dp"
-        android:layout_toStartOf="@+id/fwd"
+        android:layout_alignTop="@+id/MenuView"
+        android:layout_alignEnd="@+id/MenuView"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="120dp"
         android:background="@drawable/back"
         android:visibility="invisible"
         tools:layout_editor_absoluteX="171dp"
@@ -133,27 +125,54 @@
         android:id="@+id/fwd"
         android:layout_width="29dp"
         android:layout_height="32dp"
-        android:layout_below="@+id/button3"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="4dp"
+        android:layout_alignTop="@id/MenuView"
+        android:layout_alignEnd="@+id/MenuView"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="85dp"
         android:background="@drawable/fwd"
         android:visibility="invisible"
         tools:layout_editor_absoluteX="157dp"
         tools:layout_editor_absoluteY="17dp" />
-
     <Button
-        android:id="@+id/refresh"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_below="@+id/back"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="12dp"
-        android:layout_toStartOf="@+id/button7"
-        android:background="@drawable/refresh"
-        android:visibility="invisible"
-        tools:layout_editor_absoluteX="135dp"
-        tools:layout_editor_absoluteY="46dp" />
+        android:id="@+id/button5"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/MenuView"
+        android:layout_alignEnd="@+id/MenuView"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="5dp"
+        android:background="@android:color/holo_green_light"
+        android:text="@string/rateus"
+        android:visibility="invisible" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/MenuView"
+            android:layout_alignEnd="@+id/MenuView"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/dlx"
+            android:visibility="invisible" />
+
+
+
+
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignTop="@+id/MenuView"
+            android:layout_alignEnd="@+id/MenuView"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="45dp"
+            android:background="@drawable/refresh"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="135dp"
+            tools:layout_editor_absoluteY="46dp" />
+
+
 
 
 </RelativeLayout>
